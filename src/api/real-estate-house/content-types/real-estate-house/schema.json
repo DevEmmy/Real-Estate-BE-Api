@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "real_estate_houses",
+  "info": {
+    "singularName": "real-estate-house",
+    "pluralName": "real-estate-houses",
+    "displayName": "Real Estate House"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "date_added": {
+      "type": "date",
+      "default": "2022-04-28"
+    },
+    "location": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "real_estate_subcategory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::real-estate-subcategory.real-estate-subcategory",
+      "inversedBy": "real_estate_houses"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

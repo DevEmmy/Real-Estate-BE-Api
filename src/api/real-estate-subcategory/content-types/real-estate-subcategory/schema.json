@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "real_estate_subcategories",
+  "info": {
+    "singularName": "real-estate-subcategory",
+    "pluralName": "real-estate-subcategories",
+    "displayName": "Real Estate Subcategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "real_estate_houses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::real-estate-house.real-estate-house",
+      "mappedBy": "real_estate_subcategory"
+    }
+  }
+}
